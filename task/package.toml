@@ -1,0 +1,26 @@
+
+name =    "task"
+version = "2.5.1"
+release = 1
+sources = ["http://www.taskwarrior.org/download/%{name}-%{version}.tar.gz"]
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+
+description = "Powerful task manager for the command-line"
+url = "http://taskwarrior.org/projects/show/taskwarrior/"
+
+dependencies = [ "util-linux", "libuuid" ]
+build-dependencies = [ "cmake" ]
+
+cmake-options = [
+	"-DENABLE_SYNC=OFF"
+#	"-DTASK_DOCDIR=share/task"
+]
+
+[splits.task-doc]
+description = "Example scripts and documentation for 'task'"
+files = [ "%{prefix}/share/doc/task" ]
+
+[os.Fedora]
+build-dependencies = [ "cmake", "libuuid-devel", "gcc-c++" ]
+
