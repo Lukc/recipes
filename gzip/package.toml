@@ -1,0 +1,10 @@
+
+description = "GNU compression utility"
+url =         "http://www.gzip.org/"
+packager =    "Luka Vandervelden <lukc@upyum.com>"
+
+name =    "gzip"
+version = "1.6"
+release = 1
+sources = [ "http://ftp.gnu.org/gnu/%{name}/%{name}-%{version}.tar.xz" ]
+
