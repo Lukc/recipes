@@ -3,7 +3,7 @@ name = "termbox"
 release = 1
 sources = ["git+https://github.com/nsf/termbox.git"]
 
-description = "Library for writing text-based user interfaces"
+summary = "Library for writing text-based user interfaces"
 url = "https://github.com/nsf/termbox"
 
 packager = "Luka Vandervelden <lukc@upyum.com>"
