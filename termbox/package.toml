@@ -1,13 +1,10 @@
 
 name = "termbox"
 release = 1
-sources = ["git+https://github.com/nsf/termbox.git"]
+sources = ["git+https://github.com/nsf/termbox"]
 
 summary = "Library for writing text-based user interfaces"
 url = "https://github.com/nsf/termbox"
 
 packager = "Luka Vandervelden <lukc@upyum.com>"
-
-# Temporary fix until we can truly guess dirnames and versions.
-dirname = "%{name}.git"
 
