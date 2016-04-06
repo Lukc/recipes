@@ -1,0 +1,16 @@
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+summary = "High-level library for retrieving and uploading files using URLs."
+license = "BSD"
+
+name = "libfetch"
+version = "2.33"
+sources = [
+	"https://sources.archlinux.org/other/libfetch/libfetch-%{version}.tar.gz",
+	"Makefile" # Thanks Alpine Linux for that Makefile!
+]
+
+configure = [
+	"cp Makefile %{name}-%{version}/"
+]
+
