@@ -5,6 +5,7 @@ sources = ["git+https://github.com/nsf/termbox"]
 
 summary = "Library for writing text-based user interfaces"
 url = "https://github.com/nsf/termbox"
+class = "library"
 
 packager = "Luka Vandervelden <lukc@upyum.com>"
 
