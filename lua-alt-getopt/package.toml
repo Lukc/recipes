@@ -1,0 +1,22 @@
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+url      = "http://luaforge.net/projects/alt-getopt/"
+summary  = "Lua module for processing CLI arguments"
+
+name = "lua-alt-getopt"
+version = "0.7.0"
+
+sources = ["http://files.luaforge.net/releases/alt-getopt/alt-getopt/alt-getopt-%{version}/%{name}-%{version}.tar.gz"]
+
+options = ["no-arch"]
+
+configure = []
+build = []
+install = [
+	"mkdir -p %{pkg}%{sharedir}/lua/5.1",
+	"mkdir -p %{pkg}%{sharedir}/lua/5.2",
+	"mkdir -p %{pkg}%{sharedir}/lua/5.3",
+	"cp %{name}-%{version}/alt_getopt.lua %{pkg}%{sharedir}/lua/5.1",
+	"ln -s ../5.1/alt_getopt.lua %{pkg}%{sharedir}/lua/5.2/alt_getopt.lua",
+	"ln -s ../5.1/alt_getopt.lua %{pkg}%{sharedir}/lua/5.3/alt_getopt.lua"
+]
