@@ -1,0 +1,30 @@
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+url      = "https://github.com/mpeterv/argparse"
+summary  = "Feature-rich command line parser for Lua"
+
+name = "lua-argparse"
+version = "0.5.0"
+
+sources = [
+	"https://github.com/mpeterv/argparse/archive/%{version}.tar.gz -> %{name}-%{version}.tar.gz"
+]
+
+dependencies = [
+	"lua"
+]
+
+options = ["no-arch"]
+dirname = "argparse"
+
+configure = []
+build = []
+install = [
+	"mkdir -p %{pkg}%{sharedir}/lua/5.1",
+	"mkdir -p %{pkg}%{sharedir}/lua/5.2",
+	"mkdir -p %{pkg}%{sharedir}/lua/5.3",
+	"cp argparse-%{version}/src/argparse.lua %{pkg}%{sharedir}/lua/5.1",
+	"ln -s ../5.1/argparse.lua %{pkg}%{sharedir}/lua/5.2/argparse.lua",
+	"ln -s ../5.1/argparse.lua %{pkg}%{sharedir}/lua/5.3/argparse.lua"
+]
+
