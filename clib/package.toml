@@ -19,3 +19,6 @@ install-options = [
 [os.Alpine]
 dependencies= ["libcurl"]
 
+[os.Debian]
+build-dependencies = ["libcurl4-openssl-dev"]
+
