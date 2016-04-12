@@ -1,0 +1,21 @@
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+summary  = "Package manager for the C programming language"
+url      = "https://github.com/clibs/clib"
+
+name = "clib"
+sources = ["git+https://github.com/clibs/clib"]
+
+dependencies = ["curl"]
+build-dependencies = ["curl-dev"]
+
+configure = []
+
+install-options = [
+	# No DESTDIR is supported by that Makefile…
+	"PREFIX='%{pkg}%{prefix}'"
+]
+
+[os.Alpine]
+dependencies= ["libcurl"]
+
