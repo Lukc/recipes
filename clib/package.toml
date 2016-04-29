@@ -19,3 +19,7 @@ install-options = [
 [os.Alpine]
 dependencies= ["libcurl"]
 
+[os.Fedora]
+dependencies = ["libcurl"]
+build-dependencies = ["libcurl-devel"]
+
