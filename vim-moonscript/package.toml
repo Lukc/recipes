@@ -1,0 +1,23 @@
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+
+summary = "Moonscript support for Vim."
+url = "https://github.com/leafo/moonscript-vim"
+
+name = "vim-moonscript"
+release = 1
+
+sources = ["git+%{url}"]
+
+dependencies = ["vim"]
+
+configure = []
+build = []
+install = ["""
+	V=`vim --version | head -n1 | cut -d ' ' -f 5 | tr -d .`
+
+	mkdir -p %{pkg}%{sharedir}/vim/vim$V
+
+	cp -r moonscript-vim/*/ %{pkg}%{sharedir}/vim/vim$V/
+"""]
+

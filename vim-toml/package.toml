@@ -1,0 +1,23 @@
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+
+summary = "TOML support for Vim."
+url = "https://github.com/cespare/vim-toml"
+
+name = "vim-toml"
+release = 1
+
+sources = ["git+%{url}"]
+
+dependencies = ["vim"]
+
+configure = []
+build = []
+install = ["""
+	V=`vim --version | head -n1 | cut -d ' ' -f 5 | tr -d .`
+
+	mkdir -p %{pkg}%{sharedir}/vim/vim$V
+
+	cp -r vim-toml/*/ %{pkg}%{sharedir}/vim/vim$V/
+"""]
+
