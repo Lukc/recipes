@@ -5,11 +5,12 @@ summary = "Official themes for vim-airline"
 url = "https://github.com/vim-airline/vim-airline-themes"
 
 name = "vim-airline-themes"
-release = 1
+release = 2
 
 sources = ["git+https://github.com/vim-airline/vim-airline-themes"]
 
 dependencies = ["vim-airline"]
+options = ["no-arch"]
 
 configure = []
 build = []

@@ -5,11 +5,12 @@ summary = "TOML support for Vim."
 url = "https://github.com/cespare/vim-toml"
 
 name = "vim-toml"
-release = 1
+release = 2
 
 sources = ["git+%{url}"]
 
 dependencies = ["vim"]
+options = ["no-arch"]
 
 configure = []
 build = []

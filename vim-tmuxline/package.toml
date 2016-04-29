@@ -5,11 +5,12 @@ summary = "Simple tmux statusline generator with support"
 url = "https://github.com/edkolev/tmuxline.vim"
 
 name = "vim-tmuxline"
-release = 1
+release = 2
 
 sources = ["git+https://github.com/edkolev/tmuxline.vim"]
 
 dependencies = ["vim-airline"]
+options = ["no-arch"]
 
 configure = []
 build = []

@@ -5,11 +5,12 @@ summary = "Moonscript support for Vim."
 url = "https://github.com/leafo/moonscript-vim"
 
 name = "vim-moonscript"
-release = 1
+release = 2
 
 sources = ["git+%{url}"]
 
 dependencies = ["vim"]
+options = ["no-arch"]
 
 configure = []
 build = []

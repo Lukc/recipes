@@ -5,11 +5,12 @@ summary = "Simple shell prompt generator with airline integration"
 url = "https://github.com/edkolev/promptline.vim"
 
 name = "vim-promptline"
-release = 1
+release = 2
 
 sources = ["git+https://github.com/edkolev/promptline.vim"]
 
 dependencies = ["vim-airline"]
+options = ["no-arch"]
 
 configure = []
 build = []

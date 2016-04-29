@@ -5,11 +5,12 @@ summary = "Lean & mean status/tabline for vim that's light as air"
 url = "https://github.com/vim-airline/vim-airline"
 
 name = "vim-airline"
-release = 1
+release = 2
 
 sources = ["git+https://github.com/vim-airline/vim-airline"]
 
 dependencies = ["vim"]
+options = ["no-arch"]
 
 configure = []
 build = []
