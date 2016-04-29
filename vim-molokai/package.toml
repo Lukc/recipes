@@ -1,0 +1,24 @@
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+
+summary = "Molokai colorscheme for Vim."
+url = "https://github.com/tomasr/molokai"
+
+name = "vim-molokai"
+release = 2
+
+sources = ["git+%{url}"]
+
+dependencies = ["vim"]
+options = ["no-arch"]
+
+configure = []
+build = []
+install = ["""
+	V=`vim --version | head -n1 | cut -d ' ' -f 5 | tr -d .`
+
+	mkdir -p %{pkg}%{sharedir}/vim/vim$V
+
+	cp -r molokai/*/ %{pkg}%{sharedir}/vim/vim$V/
+"""]
+

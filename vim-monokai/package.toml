@@ -1,0 +1,24 @@
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+
+summary = "Monokai colorscheme for Vim."
+url = "https://github.com/sickill/vim-monokai"
+
+name = "vim-monokai"
+release = 2
+
+sources = ["git+%{url}"]
+
+dependencies = ["vim"]
+options = ["no-arch"]
+
+configure = []
+build = []
+install = ["""
+	V=`vim --version | head -n1 | cut -d ' ' -f 5 | tr -d .`
+
+	mkdir -p %{pkg}%{sharedir}/vim/vim$V
+
+	cp -r vim-monokai/*/ %{pkg}%{sharedir}/vim/vim$V/
+"""]
+
