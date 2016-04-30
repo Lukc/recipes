@@ -1,0 +1,25 @@
+
+summary = "Crystal programming language"
+url = "http://crystal-lang.org"
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+
+name = "crystal"
+version = "0.15.0"
+
+sources = ["https://github.com/crystal-lang/crystal/archive/%{version}.tar.gz -> %{name}-%{version}.tar.gz"]
+
+configure = []
+build-options = [
+	"EXPORTS='CRYSTAL_CONFIG_PATH=%{sharedir}/crystal CRYSTAL_CONFIG_VERSION=%{version}'"
+]
+install = ["""
+	cd %{name}-%{version}
+
+	mkdir -p '%{pkg}%{bindir}'
+	cp .build/crystal '%{pkg}%{bindir}'
+
+	mkdir -p '%{pkg}%{sharedir}'
+	cp -r src '%{pkg}%{sharedir}/crystal'
+"""]
+

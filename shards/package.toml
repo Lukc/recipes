@@ -1,0 +1,16 @@
+
+summary = "Dependency manager for the Crystal language"
+
+name = "shards"
+version = "0.6.2"
+
+dependencies = [ "crystal" ]
+
+sources = ["https://github.com/crystal-lang/shards/archive/v0.6.2.tar.gz -> %{name}-%{version}.tar.gz"]
+
+configure = []
+install = ["""
+	mkdir -p %{pkg}%{bindir}
+	cp %{name}-%{version}/bin/shards %{pkg}%{bindir}/
+"""]
+
