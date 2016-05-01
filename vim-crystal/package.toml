@@ -1,0 +1,24 @@
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+
+summary = "Crystal support for Vim."
+url = "https://github.com/rhysd/vim-crystal"
+
+name = "vim-crystal"
+release = 2
+
+sources = ["git+%{url}"]
+
+dependencies = ["vim"]
+options = ["no-arch"]
+
+configure = []
+build = []
+install = ["""
+	V=`vim --version | head -n1 | cut -d ' ' -f 5 | tr -d .`
+
+	mkdir -p %{pkg}%{sharedir}/vim/vim$V
+
+	cp -r vim-crystal/*/ %{pkg}%{sharedir}/vim/vim$V/
+"""]
+
