@@ -1,0 +1,23 @@
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+
+summary = "zsh configuration from Lukc"
+url = "https://github.com/Lukc/dotfiles"
+
+name = "zshrc"
+release = 1
+
+sources = ["git+%{url}"]
+
+dependencies = ["zsh"]
+options = ["no-arch"]
+
+configure = []
+build = []
+install = ["""
+	mkdir -p %{pkg}%{confdir}/zsh
+
+	cp -r dotfiles/zsh/zshrc %{pkg}%{confdir}/zsh/
+	cp -r dotfiles/zsh/zsh/* %{pkg}%{confdir}/zsh/
+"""]
+
