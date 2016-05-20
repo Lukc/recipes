@@ -5,7 +5,7 @@ summary = "zsh configuration from Lukc"
 url = "https://github.com/Lukc/dotfiles"
 
 name = "zshrc"
-release = 1
+release = 2
 
 sources = ["git+%{url}"]
 
@@ -17,7 +17,7 @@ build = []
 install = ["""
 	mkdir -p %{pkg}%{confdir}/zsh
 
-	cp -r dotfiles/zsh/zshrc %{pkg}%{confdir}/zsh/
-	cp -r dotfiles/zsh/zsh/* %{pkg}%{confdir}/zsh/
+	cp -r dotfiles/zshrc/zshrc %{pkg}%{confdir}/
+	cp -r dotfiles/zshrc/zsh/* %{pkg}%{confdir}/zsh/
 """]
 
