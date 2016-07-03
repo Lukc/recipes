@@ -1,0 +1,28 @@
+
+summary = "A set of utilities to manage software packages"
+url = "http://crux.nu/gitweb/?p=tools/pkgutils.git"
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+
+name = "pkgutils"
+version = "5.36"
+sources = ["http://crux.nu/files/%name-%version.tar.xz"]
+
+dependencies = [
+	"libarchive"
+]
+
+configure = [
+	"cd %name-%version",
+	"sed -i -e 's|-static||g' Makefile"
+]
+
+build-options = [
+	"LDFLAGS=-larchive"
+]
+
+install = [
+	"cd %name-%version",
+	"make DESTDIR='%pkg' MANDIR='%{mandir}' install"
+]
+
