@@ -18,7 +18,9 @@ dependencies = [
 	"lua-alt-getopt"
 ]
 
-configure = []
+configure = [
+	"sed -i -e 's|lua5.1|lua|' %{name}-%{version}/Makefile"
+]
 build = [
 	"cd %{name}-%{version}",
 	"make compile"
@@ -42,4 +44,12 @@ install = [
 	"ln -s ../5.1/moonscript.lua %{pkg}%{sharedir}/lua/5.2/moonscript.lua",
 	"ln -s ../5.1/moonscript.lua %{pkg}%{sharedir}/lua/5.3/moonscript.lua"
 ]
+
+[os.Fedora]
+name = "lua-moonscript"
+
+[watch]
+url = "https://github.com/leafo/moonscript/releases"
+selector = ".release.label-latest .css-truncate-target"
+subs = [["^v", ""]]
 
