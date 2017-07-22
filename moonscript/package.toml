@@ -4,7 +4,7 @@ url      = "http://moonscript.org"
 summary  = "Dynamic scripting language that compiles into Lua"
 
 name = "moonscript"
-version = "0.4.0"
+version = "0.5.0"
 sources = [
 	"https://github.com/leafo/moonscript/archive/v0.4.0.tar.gz -> %{name}-%{version}.tar.gz"
 ]
